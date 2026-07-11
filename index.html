@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubersoft | Mobile Apps, Web Services &amp; IT Consulting</title>
+<meta name="description" content="Ubersoft LLC is a software studio building mobile apps and helping businesses win with modern web services and practical IT consulting. Makers of Zombie Bill Tracker.">
+<link rel="canonical" href="https://ubersoft.pro/">
+<meta name="theme-color" content="#242424">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<meta property="og:title" content="Ubersoft — Mobile Apps, Web Services &amp; IT Consulting">
+<meta property="og:description" content="A software studio that ships. Mobile app development, web services, and IT consulting — makers of Zombie Bill Tracker.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ubersoft.pro/">
+<meta property="og:image" content="https://ubersoft.pro/assets/img/hero-servers-opt.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ubersoft — Mobile Apps, Web Services &amp; IT Consulting">
+<meta name="twitter:description" content="A software studio that ships. Makers of Zombie Bill Tracker.">
+<meta name="twitter:image" content="https://ubersoft.pro/assets/img/hero-servers-opt.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ubersoft LLC",
+  "url": "https://ubersoft.pro",
+  "description": "Software studio: mobile app development, web services, and IT consulting.",
+  "brand": { "@type": "Brand", "name": "Ubersoft" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @font-face{
+    font-family:'Norwester';
+    src:url('assets/fonts/norwester.woff2') format('woff2');
+    font-weight:400; font-style:normal; font-display:swap;
+  }
+  :root{
+    --orange:#ff8d00; --orange-dk:#e07c00;
+    --charcoal:#242424; --footer:#4a4a4a;
+    --ink:#2b2b2b; --dim:#6b6b6b; --line:#dddddd;
+    --panel:#ececec; --panel-blue:#e9f0fa; --card:#f5f5f5;
+    --sans:'Chakra Petch','Segoe UI',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:#fff; color:var(--ink); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased}
+  a{color:inherit; text-decoration:none}
+  img{max-width:100%}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+
+  /* header */
+  header{position:sticky; top:0; z-index:50; background:var(--charcoal); border-bottom:1px solid #000}
+  .head-in{display:flex; align-items:center; justify-content:space-between; max-width:1200px; margin:0 auto; padding:16px 24px}
+  .brand{font-family:'Norwester',var(--sans); font-size:26px; letter-spacing:1px; color:var(--orange)}
+  nav{display:flex; gap:30px; flex-wrap:wrap}
+  nav a{color:#fff; font-size:13px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; transition:color .15s}
+  nav a:hover{color:var(--orange)}
+
+  /* hero */
+  .hero{position:relative; min-height:78vh; display:grid; place-items:center; overflow:hidden}
+  .hero picture, .hero .bg{position:absolute; inset:0}
+  .hero .bg img{width:100%; height:100%; object-fit:cover; display:block}
+  .hero::after{content:""; position:absolute; inset:0; background:rgba(0,0,0,.25)}
+  .hero-panel{position:relative; z-index:2; background:rgba(10,10,10,.55); padding:clamp(28px,5vw,56px) clamp(22px,5vw,64px); max-width:860px; margin:56px 24px; text-align:center}
+  .hero h1{color:#fff; font-size:clamp(24px,4.2vw,40px); font-weight:600; letter-spacing:.04em; text-transform:uppercase}
+  .hero p{color:#f0f0f0; font-size:clamp(15px,1.6vw,18px); margin-top:18px}
+  .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:28px}
+  .btn{display:inline-block; padding:13px 30px; font-family:var(--sans); font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; transition:.15s; cursor:pointer; border:2px solid var(--orange)}
+  .btn-orange{background:var(--orange); color:#1a1a1a}
+  .btn-orange:hover{background:var(--orange-dk); border-color:var(--orange-dk)}
+  .btn-ghost{background:transparent; color:#fff; border-color:#ffffffaa}
+  .btn-ghost:hover{border-color:#fff}
+
+  /* sections */
+  section{padding:clamp(56px,8vw,96px) 0}
+  h2{font-size:clamp(24px,3vw,32px); font-weight:600; letter-spacing:.08em; text-transform:uppercase; text-align:center; color:var(--ink)}
+  .sec-sub{text-align:center; color:var(--dim); margin:12px auto 0; max-width:44em}
+
+  /* services */
+  .svc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:44px}
+  .svc{background:var(--card); border-top:4px solid var(--orange); padding:28px 24px}
+  .svc h3{font-size:16px; font-weight:600; letter-spacing:.08em; text-transform:uppercase}
+  .svc p{color:var(--dim); font-size:14.5px; margin-top:12px}
+
+  /* apps */
+  .apps{background:var(--panel)}
+  .app-card{display:flex; gap:28px; align-items:center; background:#fff; padding:clamp(22px,3.5vw,40px); margin-top:44px; box-shadow:0 14px 40px -24px rgba(0,0,0,.35)}
+  .app-card img{width:104px; height:104px; border-radius:22%; border:1px solid var(--line); flex:0 0 auto}
+  .app-card h3{font-size:19px; font-weight:600; letter-spacing:.06em; text-transform:uppercase}
+  .app-card p{color:var(--dim); font-size:15px; margin-top:8px; max-width:46em}
+  .app-links{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+  .btn-dark{background:transparent; color:var(--ink); border-color:var(--charcoal)}
+  .btn-dark:hover{background:var(--charcoal); color:#fff}
+  .apps-note{text-align:center; color:var(--dim); font-size:13px; letter-spacing:.06em; text-transform:uppercase; margin-top:26px}
+
+  /* about */
+  .about-split{display:grid; grid-template-columns:1.2fr .8fr; margin-top:44px; box-shadow:0 14px 40px -24px rgba(0,0,0,.3)}
+  .about-text{background:#fff; border:1px solid var(--line); border-right:0; padding:clamp(26px,4vw,52px)}
+  .about-text h2{text-align:left}
+  .about-text p{color:var(--dim); margin-top:16px; max-width:38em}
+  .about-side{background:var(--panel-blue); min-height:260px; display:grid; place-items:center}
+  .about-side .mark{font-family:'Norwester',var(--sans); font-size:clamp(40px,6vw,64px); color:var(--orange); letter-spacing:2px; opacity:.9}
+
+  /* contact */
+  .contact{background:var(--panel)}
+  .contact-split{display:grid; grid-template-columns:1fr 1fr; margin-top:44px}
+  .contact-side{background:#dfdfdf; min-height:240px}
+  .contact-box{background:#fff; padding:clamp(26px,4vw,52px)}
+  .contact-box h2{text-align:left}
+  .contact-box p{color:var(--dim); margin:16px 0 26px; max-width:34em}
+  .contact-mail{font-size:14px; color:var(--dim); margin-top:16px}
+  .contact-mail a{color:var(--ink); font-weight:600; border-bottom:2px solid var(--orange)}
+
+  /* footer */
+  footer{background:var(--footer); color:#e8e8e8; padding:26px 0}
+  .foot-in{display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; max-width:1200px; margin:0 auto; padding:0 24px; font-size:13px; letter-spacing:.05em}
+  .foot-in b{font-weight:600}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1; transform:none}
+
+  @media(max-width:860px){
+    .svc-grid{grid-template-columns:1fr}
+    .about-split,.contact-split{grid-template-columns:1fr}
+    .about-text{border-right:1px solid var(--line)}
+    .about-side{min-height:160px}
+    .contact-side{min-height:120px; order:2}
+    .app-card{flex-direction:column; text-align:center}
+    .app-links{justify-content:center}
+    nav{gap:18px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-in">
+    <a class="brand" href="#top">UBERSOFT</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#apps">Apps</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top" style="padding:0">
+  <div class="bg">
+    <picture>
+      <source srcset="assets/img/hero-servers.webp" type="image/webp">
+      <img src="assets/img/hero-servers-opt.jpg" alt="Server racks glowing orange in a dark data center" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-panel reveal in">
+    <h1>Mobile Apps. Web Services. IT&nbsp;Consulting.</h1>
+    <p>Ubersoft is a software studio that ships. We build mobile apps people love, craft fast modern websites, and give small businesses practical technology guidance — from concept to launch and beyond.</p>
+    <div class="cta-row">
+      <a class="btn btn-orange" href="#contact">Work With Us</a>
+      <a class="btn btn-ghost" href="#apps">See Our Apps</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="reveal">Services</h2>
+    <p class="sec-sub reveal">Three things, done properly.</p>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <h3>Mobile App Development</h3>
+        <p>Android apps built end-to-end — design, development, and delivery to Google Play. Fast, offline-first, and polished until they feel great in the hand.</p>
+      </div>
+      <div class="svc reveal">
+        <h3>Web Services</h3>
+        <p>Modern websites and web apps that load fast and look sharp. Designed, built, deployed, and kept running — without the bloat.</p>
+      </div>
+      <div class="svc reveal">
+        <h3>IT Consulting</h3>
+        <p>Straightforward technology strategy for small business: infrastructure, tooling, automation, and support that keeps your operation moving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="apps" id="apps">
+  <div class="wrap">
+    <h2 class="reveal">Our Apps</h2>
+    <p class="sec-sub reveal">We use our own toolbox. Here's what we've shipped.</p>
+    <div class="app-card reveal">
+      <img src="assets/img/zbt-app-icon.png" alt="Zombie Bill Tracker app icon" width="104" height="104">
+      <div>
+        <h3>Zombie Bill Tracker</h3>
+        <p>The bill tracker you'll actually open. Every bill becomes a survivor in your camp — pay on time and they live, miss it and they turn. Fully offline, no account, 8 languages. $3.99 one-time.</p>
+        <div class="app-links">
+          <a class="btn btn-orange" href="https://play.google.com/store/apps/details?id=com.zbilltracker.app" target="_blank" rel="noopener">Get It On Google Play</a>
+          <a class="btn btn-dark" href="https://zbilltracker.com" target="_blank" rel="noopener">zbilltracker.com</a>
+        </div>
+      </div>
+    </div>
+    <p class="apps-note reveal">More projects in the works.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-split reveal">
+      <div class="about-text">
+        <h2>About</h2>
+        <p>Ubersoft LLC is an independent software studio. With many years of experience across development and infrastructure, we build our own products and partner with businesses to deliver innovative, effective digital solutions.</p>
+        <p>Technical expertise plus creativity — that's the whole formula. Join us and let's transform your ideas into reality.</p>
+      </div>
+      <div class="about-side"><span class="mark">UBERSOFT</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-split reveal">
+      <div class="contact-side"></div>
+      <div class="contact-box">
+        <h2>Contact</h2>
+        <p>Tell us about your project — an app you want built, a website that needs to exist, or IT that should just work. We'll get back to you quickly.</p>
+        <a class="btn btn-orange" href="mailto:contact@ubersoft.pro">Email Us</a>
+        <p class="contact-mail">Or write to <a href="mailto:contact@ubersoft.pro">contact@ubersoft.pro</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <span><b>UBERSOFT.PRO</b> | Ubersoft LLC</span>
+    <span>© 2026 All Rights Reserved</span>
+  </div>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.12});
+  document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
