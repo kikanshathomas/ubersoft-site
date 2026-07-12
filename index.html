@@ -252,5 +252,7 @@
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.12});
   document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
 </script>
+  <script data-goatcounter="https://ubersoft.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
