@@ -201,8 +201,10 @@
 
 <section class="apps" id="apps">
   <div class="wrap">
-    <h2 class="reveal">Our Apps</h2>
-    <p class="sec-sub reveal">We use our own toolbox. Here's what we've shipped.</p>
+    <h2 class="reveal">Our Products</h2>
+    <p class="sec-sub reveal">We use our own toolbox — every product below is built, shipped, and maintained by Ubersoft.</p>
+
+    <!-- ═══════════ PRODUCT: Zombie Bill Tracker ═══════════ -->
     <div class="app-card reveal">
       <img src="assets/img/zbt-app-icon.png" alt="Zombie Bill Tracker app icon" width="104" height="104">
       <div>
@@ -214,6 +216,21 @@
         </div>
       </div>
     </div>
+
+    <!-- ═══════════ PRODUCT: Invasion Of Zombies ═══════════ -->
+    <div class="app-card reveal">
+      <img src="assets/img/ioz-app-icon.png" alt="Invasion Of Zombies app icon" width="104" height="104">
+      <div>
+        <h3>Invasion Of Zombies</h3>
+        <p>A chibi zombie crowd-runner. Steer a swarm of survivors down an endless city street, multiply the crowd through the gates, and outlast the horde. Fully offline, no account. $0.99 one-time.</p>
+        <div class="app-links">
+          <a class="btn btn-orange" href="https://invasionofzombies.com/download.html" target="_blank" rel="noopener">Coming To Google Play</a>
+          <a class="btn btn-dark" href="https://invasionofzombies.com" target="_blank" rel="noopener">invasionofzombies.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ To add a product: copy an app-card block above ═══════════ -->
     <p class="apps-note reveal">More projects in the works.</p>
   </div>
 </section>
@@ -249,13 +266,15 @@
 <footer>
   <div class="foot-in">
     <span><b>UBERSOFT.PRO</b> | Ubersoft LLC · 332 W Lee Hwy, Suite 230, Warrenton, VA 20186</span>
-    <span><a href="privacy.html">Privacy Policy</a> | © 2026 All Rights Reserved</span>
+    <span><a href="privacy.html">Privacy Policy</a> | © <span id="cpyear">2025–2026</span> All Rights Reserved</span>
   </div>
 </footer>
 
 <script>
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.12});
   document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
+  // copyright year: company founded 2025; end year tracks the current year
+  (function(){var el=document.getElementById('cpyear');if(el){var y=new Date().getFullYear();el.textContent=y>2025?('2025–'+y):'2025';}})();
   // click-to-copy email (fallback: open mail app)
   (function(){
     var b = document.getElementById('copyMail');
