@@ -49,6 +49,10 @@
   p{color:var(--dim); font-size:15px; margin-bottom:12px; max-width:64em}
   p b{color:var(--ink); font-weight:600}
   a.link{color:var(--ink); font-weight:600; border-bottom:2px solid var(--orange)}
+  ul.plist{list-style:none; margin:0 0 12px; max-width:64em}
+  ul.plist li{color:var(--dim); font-size:15px; position:relative; padding-left:20px; margin-bottom:8px}
+  ul.plist li::before{content:""; position:absolute; left:0; top:.72em; width:10px; height:2px; background:var(--orange)}
+  ul.plist b{color:var(--ink); font-weight:600}
 
   footer{background:var(--footer); color:#e8e8e8; padding:26px 0}
   .foot-in{display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; max-width:1200px; margin:0 auto; padding:0 24px; font-size:13px; letter-spacing:.05em}
@@ -89,7 +93,11 @@
     <p>The site loads the Chakra Petch typeface from Google Fonts. Your browser requests those font files directly from Google, which may log the request (including your IP address) under <a class="link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>. No other third-party resources are loaded.</p>
 
     <h2>04 — Our products</h2>
-    <p>Apps we publish have their own privacy policies. Zombie Bill Tracker's policy lives at <a class="link" href="https://zbilltracker.com/privacy.html" target="_blank" rel="noopener">zbilltracker.com/privacy</a>, and Invasion Of Zombies' at <a class="link" href="https://invasionofzombies.com/privacy.html" target="_blank" rel="noopener">invasionofzombies.com/privacy</a> — in both apps, your data stays entirely on your device.</p>
+    <p>Apps we publish have their own privacy policies — in every app below, your data stays entirely on your device:</p>
+    <ul class="plist">
+      <li><b>Zombie Bill Tracker</b> — <a class="link" href="https://zbilltracker.com/privacy.html" target="_blank" rel="noopener">zbilltracker.com/privacy</a></li>
+      <li><b>Invasion Of Zombies</b> — <a class="link" href="https://invasionofzombies.com/privacy.html" target="_blank" rel="noopener">invasionofzombies.com/privacy</a></li>
+    </ul>
 
     <h2>05 — Changes</h2>
     <p>If we ever change how the site handles information, we will update this page and the effective date above.</p>
