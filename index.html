@@ -60,6 +60,17 @@
   nav{display:flex; gap:30px; flex-wrap:wrap}
   nav a{color:#fff; font-size:13px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; transition:color .15s}
   nav a:hover{color:var(--orange)}
+  .nav-toggle{display:none; background:none; border:0; cursor:pointer; padding:6px; flex-direction:column; gap:5px}
+  .nav-toggle span{display:block; width:22px; height:2px; background:#fff; transition:transform .2s, opacity .2s}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  @media(max-width:640px){
+    .nav-toggle{display:flex}
+    nav{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0; background:var(--charcoal); border-bottom:1px solid #000}
+    nav.open{display:flex}
+    nav a{padding:14px 24px; border-top:1px solid rgba(255,255,255,.08)}
+  }
 
   /* hero */
   .hero{position:relative; min-height:78vh; display:grid; place-items:center; overflow:hidden}
@@ -148,12 +159,15 @@
 <header>
   <div class="head-in">
     <a class="brand" href="#top">UBERSOFT</a>
-    <nav>
+    <nav id="site-nav">
       <a href="#services">Services</a>
       <a href="#apps">Apps</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -288,6 +302,18 @@
   document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
   // copyright year: company founded 2025; end year tracks the current year
   (function(){var el=document.getElementById('cpyear');if(el){var y=new Date().getFullYear();el.textContent=y>2026?("2026–"+y):"2026";}})();
+  // mobile hamburger: toggles the nav; closes itself after a link is tapped
+  (function(){
+    var t = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+    if(!t || !n) return;
+    t.addEventListener('click', function(){
+      var open = n.classList.toggle('open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    n.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ n.classList.remove('open'); t.setAttribute('aria-expanded','false'); }
+    });
+  })();
   // click-to-copy email (fallback: open mail app)
   (function(){
     var b = document.getElementById('copyMail');
