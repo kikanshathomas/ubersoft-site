@@ -103,6 +103,10 @@
   .app-card{display:flex; gap:28px; align-items:center; background:#fff; padding:clamp(22px,3.5vw,40px); margin-top:44px; box-shadow:0 14px 40px -24px rgba(0,0,0,.35)}
   .app-card img{width:104px; height:104px; border-radius:22%; border:1px solid var(--line); flex:0 0 auto}
   .app-card h3{font-size:19px; font-weight:600; letter-spacing:.06em; text-transform:uppercase}
+  /* "Coming soon" marker — for a product whose Play listing is not public yet, so the
+     card never implies you can buy it today. 2px radius per house style. */
+  .soon{display:inline-block; margin-left:8px; padding:3px 8px; border-radius:2px;
+    background:var(--orange); color:#1a1a1a; font-size:11px; font-weight:700; letter-spacing:.1em; vertical-align:middle}
   .app-card p{color:var(--dim); font-size:15px; margin-top:8px; max-width:46em}
   .app-links{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
   .btn-dark{background:transparent; color:var(--ink); border-color:var(--charcoal)}
@@ -223,7 +227,7 @@
       <img src="assets/img/zbt-app-icon.png" alt="Zombie Bill Tracker app icon" width="104" height="104">
       <div>
         <h3>Zombie Bill Tracker</h3>
-        <p>The bill tracker you'll actually open. Every bill becomes a survivor in your camp — pay on time and they live, miss it and they turn. Fully offline, no account, 8 languages. $3.99 one-time.</p>
+        <p>The bill tracker you'll actually open. Every bill becomes a survivor in your camp — pay on time and they live, miss it and they turn. Fully offline, no account, 8 languages. $4.99 one-time.</p>
         <div class="app-links">
           <a class="btn btn-orange" href="https://play.google.com/store/apps/details?id=com.zbilltracker.app" target="_blank" rel="noopener">Get It On Google Play</a>
           <a class="btn btn-dark" href="https://zbilltracker.com" target="_blank" rel="noopener">zbilltracker.com</a>
@@ -238,7 +242,7 @@
         <h3>Invasion Of Zombies</h3>
         <p>A chibi zombie crowd-runner. Steer a swarm of survivors down an endless city street, multiply the crowd through the gates, and outlast the horde. Fully offline, no account. $1.99 one-time.</p>
         <div class="app-links">
-          <a class="btn btn-orange" href="https://invasionofzombies.com/download.html" target="_blank" rel="noopener">Coming To Google Play</a>
+          <a class="btn btn-orange" href="https://play.google.com/store/apps/details?id=com.invasionofzombies.app" target="_blank" rel="noopener">Get It On Google Play</a>
           <a class="btn btn-dark" href="https://invasionofzombies.com" target="_blank" rel="noopener">invasionofzombies.com</a>
         </div>
       </div>
@@ -249,10 +253,23 @@
       <img src="assets/img/tal-app-icon.png" alt="The App Lockr app icon" width="104" height="104">
       <div>
         <h3>The App Lockr</h3>
-        <p>A local-only password vault. Your passwords are encrypted on your device and autofill anywhere — no account, no cloud, no network permission at all. $4.99 one-time.</p>
+        <p>Locks any app behind your phone's own fingerprint or PIN — WhatsApp, photos, banking, anything. No account, no cloud, and no internet permission at all. $9.99 one-time.</p>
         <div class="app-links">
           <a class="btn btn-orange" href="https://theapplockr.com/download.html" target="_blank" rel="noopener">Coming To Google Play</a>
           <a class="btn btn-dark" href="https://theapplockr.com" target="_blank" rel="noopener">theapplockr.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ PRODUCT: Wave: Check In (not on Play yet — closed testing) ═══════════ -->
+    <div class="app-card reveal">
+      <img src="assets/img/wave-app-icon.png" alt="Wave: Check In app icon" width="104" height="104">
+      <div>
+        <h3>Wave: Check In <span class="soon">Coming soon</span></h3>
+        <p>A dignified daily check-in for older family members. They tap once to say they're okay; the family gets the notification. Native calling, emergency confirm, no feeds and no fuss. Free app — optional family circle unlock.</p>
+        <div class="app-links">
+          <!-- deliberately NO Play link: the listing is in closed testing and 404s publicly -->
+          <a class="btn btn-dark" href="https://wavetoday.app" target="_blank" rel="noopener">wavetoday.app</a>
         </div>
       </div>
     </div>
