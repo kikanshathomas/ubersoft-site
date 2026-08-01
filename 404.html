@@ -10,10 +10,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#333333">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap" rel="stylesheet">
 <style>
+  /* Chakra Petch is self-hosted, like Norwester below it: this site fetches no font
+     host. It replaced two preconnects and a stylesheet <link> to Google on 2026-08-01,
+     matching what the four product sites did the same day — this page was missed then
+     because it lives in a separate repo, outside every company gate. Latin subset only;
+     the whole non-ASCII surface here is punctuation. A grep for a Google font host in
+     this repo should come back empty and be believed. */
+  @font-face{font-family:'Chakra Petch';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/chakra-petch-400.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  @font-face{font-family:'Chakra Petch';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/chakra-petch-600.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
   @font-face{font-family:'Norwester';src:url('/assets/fonts/norwester.woff2') format('woff2');font-display:swap}
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:#333333; color:#fff; font-family:'Chakra Petch',system-ui,sans-serif; min-height:100vh; display:grid; place-items:center; text-align:center; padding:24px}
