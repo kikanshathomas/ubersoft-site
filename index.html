@@ -307,7 +307,12 @@
       <img src="assets/img/punchi-app-icon.png" alt="punchi.tv logo" width="104" height="104">
       <div>
         <h3>punchi.tv</h3>
-        <p>A live streaming site with channels running around the clock. Pick a channel and press play — watching is free, no account needed. Creators keep their own Stripe payouts on channel subscriptions.</p>
+        <!-- "no account needed" was WRONG and lived here until 2026-08-17: every
+             route on punchi.tv, the home page included, 307s to /login. Watching
+             costs nothing, but it does cost a signup — say so, because a promise
+             this page makes and the site immediately breaks is worse than the
+             smaller claim. Recheck if punchi ever opens up to logged-out viewers. -->
+        <p>A live streaming site with channels running around the clock. Watching is free — make an account, pick a channel and press play. Creators keep their own Stripe payouts on channel subscriptions.</p>
         <div class="app-links">
           <!-- No Play badge, and none is coming: this is a website, not an app.
                Same btn-dark as every other card — punchi being the odd one out
