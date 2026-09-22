@@ -166,6 +166,11 @@
 
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease}
   .reveal.in{opacity:1; transform:none}
+  /* Honour the OS "reduce motion" setting, as the product sites do. Every section on
+     this page arrives on a 600ms fade-and-rise, which is nausea for a reader with a
+     vestibular disorder; the reveal is decoration, so switching it off costs nothing
+     and the content is simply there. */
+  @media(prefers-reduced-motion:reduce){.reveal{transition:none !important; transform:none !important; opacity:1 !important}}
 
   @media(max-width:860px){
     .svc-grid{grid-template-columns:1fr}
