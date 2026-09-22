@@ -15,6 +15,7 @@
 <meta property="og:description" content="No cookies, no accounts, no ads. How ubersoft.pro handles your information.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ubersoft.pro/privacy.html">
+<meta property="og:image" content="https://ubersoft.pro/assets/img/hero-servers-opt.jpg">
 <style>
   /* Chakra Petch is self-hosted, like Norwester below it: this site fetches no font
      host. It replaced two preconnects and a stylesheet <link> to Google on 2026-08-01,
@@ -114,7 +115,7 @@
     <p>This site <strong>does</strong> count visits — including this page. It uses <a class="link" href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a>, a privacy-focused analytics service, to record which pages get read and roughly which country readers arrive from. It sets no cookies and stores nothing in your browser. It does not keep your IP address, does not follow you across other sites, and never builds a profile of you. Your browser contacts GoatCounter directly, so it can see your IP address at the moment of the request.</p>
 
     <h2>04 — What else the site loads</h2>
-    <p>Nothing else. Typefaces, images and scripts are served from ubersoft.pro itself — no font host, no CDN, no advertising or social network is contacted. Apart from GoatCounter above and the host below, your browser makes no third-party requests on this site.</p>
+    <p>Nothing else. Typefaces, images and scripts are served from ubersoft.pro itself — no font host, no CDN, no advertising or social network is contacted. Apart from GoatCounter and the host described above, your browser makes no third-party requests on this site.</p>
 
     <h2>05 — Our products</h2>
     <p>Apps we publish have their own privacy policies — in every app below, your data stays entirely on your device:</p>
@@ -124,6 +125,11 @@
       <li><b>The App Lockr</b> — <a class="link" href="https://theapplockr.com/privacy.html" target="_blank" rel="noopener">theapplockr.com/privacy</a></li>
       <li><b>Wave: Check-In</b> — <a class="link" href="https://wavetoday.app/privacy.html" target="_blank" rel="noopener">wavetoday.app/privacy</a></li>
     </ul>
+    <!-- punchi.tv is a streaming WEBSITE with accounts, not an offline app, so the
+         on-device promise above cannot cover it — it gets its own line instead of a
+         fifth bullet. Link is /privacy with NO .html: the .html variant 307s to /login,
+         and a legal link that bounces a reader into a sign-in wall is worse than none. -->
+    <p><b>punchi.tv</b> is a streaming website rather than an app, so it works differently — it has accounts, and its own policy covers what that involves: <a class="link" href="https://punchi.tv/privacy" target="_blank" rel="noopener">punchi.tv/privacy</a>.</p>
 
     <h2>06 — Changes</h2>
     <p>If we ever change how the site handles information, we will update this page and the effective date above.</p>
@@ -137,7 +143,7 @@
 <footer>
   <div class="foot-in">
     <span><b>UBERSOFT.PRO</b> | Ubersoft LLC · 332 W Lee Hwy, Suite 230, Warrenton, VA 20186</span>
-    <span><a href="privacy.html">Privacy Policy</a> | © <span id="cpyear">2026</span> All Rights Reserved</span>
+    <span><a href="privacy.html">Privacy Policy</a> | <a class="donate" href="https://ko-fi.com/ubersoft" target="_blank" rel="noopener">Support Development</a> | © <span id="cpyear">2026</span> All Rights Reserved</span>
   </div>
 </footer>
 <script>(function(){var el=document.getElementById('cpyear');if(el){var y=new Date().getFullYear();el.textContent=y>2026?("2026–"+y):"2026";}})();</script>
