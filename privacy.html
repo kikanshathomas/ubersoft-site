@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Ubersoft</title>
+<meta name="description" content="Privacy policy for ubersoft.pro — a static site with no cookies and no accounts, counting visits with GoatCounter, published by Ubersoft LLC.">
+<link rel="canonical" href="https://ubersoft.pro/privacy.html">
+<meta name="theme-color" content="#333333">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Privacy Policy — Ubersoft">
+<meta property="og:description" content="No cookies, no accounts, no ads. How ubersoft.pro handles your information.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ubersoft.pro/privacy.html">
+<meta property="og:image" content="https://ubersoft.pro/assets/img/hero-servers-opt.jpg">
+<style>
+  /* Chakra Petch is self-hosted, like Norwester below it: this site fetches no font
+     host. It replaced two preconnects and a stylesheet <link> to Google on 2026-08-01,
+     matching what the four product sites did the same day — this page was missed then
+     because it lives in a separate repo, outside every company gate. Latin subset only;
+     the whole non-ASCII surface here is punctuation. A grep for a Google font host in
+     this repo should come back empty and be believed. */
+  @font-face{font-family:'Chakra Petch';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/chakra-petch-400.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  @font-face{font-family:'Chakra Petch';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/chakra-petch-500.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  @font-face{font-family:'Chakra Petch';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/chakra-petch-600.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  @font-face{font-family:'Chakra Petch';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/chakra-petch-700.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  @font-face{
+    font-family:'Norwester';
+    src:url('assets/fonts/norwester.woff2') format('woff2');
+    font-weight:400; font-style:normal; font-display:swap;
+  }
+  :root{
+    --orange:#ffa620; --charcoal:#333333; --footer:#4a4a4a;
+    --ink:#2b2b2b; --dim:#6b6b6b; --line:#dddddd;
+    --sans:'Chakra Petch','Segoe UI',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#fff; color:var(--ink); font-family:var(--sans); line-height:1.7; -webkit-font-smoothing:antialiased; display:flex; flex-direction:column; min-height:100vh}
+  a{color:inherit; text-decoration:none}
+  .wrap{max-width:820px; margin:0 auto; padding:0 24px; width:100%}
+
+  header{position:sticky; top:0; z-index:50; background:var(--charcoal); border-bottom:1px solid #000}
+  .head-in{display:flex; align-items:center; justify-content:space-between; max-width:1200px; margin:0 auto; padding:16px 24px}
+  .brand{font-family:'Norwester',var(--sans); font-size:26px; letter-spacing:1px; color:var(--orange)}
+  nav{display:flex; gap:30px; flex-wrap:wrap}
+  nav a{color:#fff; font-size:13px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; transition:color .15s}
+  nav a:hover{color:var(--orange)}
+  .nav-toggle{display:none; background:none; border:0; cursor:pointer; padding:6px; flex-direction:column; gap:5px}
+  .nav-toggle span{display:block; width:22px; height:2px; background:#fff; transition:transform .2s, opacity .2s}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  @media(max-width:640px){
+    .nav-toggle{display:flex}
+    nav{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0; background:var(--charcoal); border-bottom:1px solid #000}
+    nav.open{display:flex}
+    nav a{padding:14px 24px; border-top:1px solid rgba(255,255,255,.08)}
+  }
+
+  main{flex:1; padding:clamp(40px,6vw,72px) 0 80px}
+  .eyebrow{font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--orange)}
+  h1{font-size:clamp(26px,4vw,38px); font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-top:10px}
+  .meta{color:var(--dim); font-size:13px; margin-top:10px; letter-spacing:.04em}
+  h2{font-size:15px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; margin:38px 0 10px; padding-top:22px; border-top:1px solid var(--line)}
+  p{color:var(--dim); font-size:15px; margin-bottom:12px; max-width:64em}
+  p b{color:var(--ink); font-weight:600}
+  a.link{color:var(--ink); font-weight:600; border-bottom:2px solid var(--orange)}
+  ul.plist{list-style:none; margin:0 0 12px; max-width:64em}
+  ul.plist li{color:var(--dim); font-size:15px; position:relative; padding-left:20px; margin-bottom:8px}
+  ul.plist li::before{content:""; position:absolute; left:0; top:.72em; width:10px; height:2px; background:var(--orange)}
+  ul.plist b{color:var(--ink); font-weight:600}
+
+  footer{background:var(--footer); color:#e8e8e8; padding:26px 0}
+  .foot-in{display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; max-width:1200px; margin:0 auto; padding:0 24px; font-size:13px; letter-spacing:.05em}
+  .foot-in b{font-weight:600}
+  .foot-in a{border-bottom:1px solid #9a9a9a}
+  .foot-in a:hover{color:#fff; border-color:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-in">
+    <a class="brand" href="index.html">UBERSOFT</a>
+    <nav id="site-nav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <span class="eyebrow">Legal</span>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Effective date: August 1, 2026</div>
+
+    <p style="margin-top:26px">This website, ubersoft.pro (the "site"), is published by <b>Ubersoft LLC</b> ("we," "us," "our"). The short version: <b>this is a static informational site — it sets no cookies, has no accounts and no advertising, and counts visits with a privacy-focused analytics service that cannot identify you.</b></p>
+
+    <h2>01 — Information we collect</h2>
+    <p>Nothing that identifies you. There are no accounts, no forms, no comment sections, and no advertising. We do not collect, store, or sell personal information from your visit. The site does count page views, in the anonymous form described in section 03.</p>
+
+    <h2>02 — Hosting</h2>
+    <p>The site is served by GitHub Pages (GitHub, Inc.). Like any web host, GitHub may receive standard technical data — such as your IP address in server logs — in order to deliver and secure the service. That data is handled under the <a class="link" href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+
+    <h2>03 — Analytics</h2>
+    <p>This site <strong>does</strong> count visits — including this page. It uses <a class="link" href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a>, a privacy-focused analytics service, to record which pages get read and roughly which country readers arrive from. It sets no cookies and stores nothing in your browser. It does not keep your IP address, does not follow you across other sites, and never builds a profile of you. Your browser contacts GoatCounter directly, so it can see your IP address at the moment of the request.</p>
+
+    <h2>04 — What else the site loads</h2>
+    <p>Nothing else. Typefaces, images and scripts are served from ubersoft.pro itself — no font host, no CDN, no advertising or social network is contacted. Apart from GoatCounter and the host described above, your browser makes no third-party requests on this site.</p>
+
+    <h2>05 — Our products</h2>
+    <p>Apps we publish have their own privacy policies — in every app below, your data stays entirely on your device:</p>
+    <ul class="plist">
+      <li><b>Zombie Bill Tracker</b> — <a class="link" href="https://zbilltracker.com/privacy.html" target="_blank" rel="noopener">zbilltracker.com/privacy</a></li>
+      <li><b>Invasion Of Zombies</b> — <a class="link" href="https://invasionofzombies.com/privacy.html" target="_blank" rel="noopener">invasionofzombies.com/privacy</a></li>
+      <li><b>The App Lockr</b> — <a class="link" href="https://theapplockr.com/privacy.html" target="_blank" rel="noopener">theapplockr.com/privacy</a></li>
+      <li><b>Wave: Check-In</b> — <a class="link" href="https://wavetoday.app/privacy.html" target="_blank" rel="noopener">wavetoday.app/privacy</a></li>
+    </ul>
+    <!-- punchi.tv is a streaming WEBSITE with accounts, not an offline app, so the
+         on-device promise above cannot cover it — it gets its own line instead of a
+         fifth bullet. Link is /privacy with NO .html: the .html variant 307s to /login,
+         and a legal link that bounces a reader into a sign-in wall is worse than none. -->
+    <p><b>punchi.tv</b> is a streaming website rather than an app, so it works differently — it has accounts, and its own policy covers what that involves: <a class="link" href="https://punchi.tv/privacy" target="_blank" rel="noopener">punchi.tv/privacy</a>.</p>
+
+    <h2>06 — Changes</h2>
+    <p>If we ever change how the site handles information, we will update this page and the effective date above.</p>
+
+    <h2>07 — Contact</h2>
+    <p>Questions? Email <a class="link" href="mailto:info@ubersoft.pro">info@ubersoft.pro</a>. If you email us, we receive your email address and whatever you send — we use it only to respond to you, and we never share it, sell it, or add you to a mailing list.</p>
+    <p>You can also reach us by mail: Ubersoft LLC, 332 W Lee Hwy, Suite 230, Warrenton, VA 20186, United States.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <span><b>UBERSOFT.PRO</b> | Ubersoft LLC · 332 W Lee Hwy, Suite 230, Warrenton, VA 20186</span>
+    <span><a href="privacy.html">Privacy Policy</a> | <a class="donate" href="https://ko-fi.com/ubersoft" target="_blank" rel="noopener">Support Development</a> | © <span id="cpyear">2026</span> All Rights Reserved</span>
+  </div>
+</footer>
+<script>(function(){var el=document.getElementById('cpyear');if(el){var y=new Date().getFullYear();el.textContent=y>2026?("2026–"+y):"2026";}})();</script>
+<script>
+  // mobile hamburger: toggles the nav; closes itself after a link is tapped
+  (function(){
+    var t = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+    if(!t || !n) return;
+    t.addEventListener('click', function(){
+      var open = n.classList.toggle('open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    n.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ n.classList.remove('open'); t.setAttribute('aria-expanded','false'); }
+    });
+  })();
+</script>
+
+  <script data-goatcounter="https://ubersoft.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
