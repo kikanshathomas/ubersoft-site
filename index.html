@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+  Home page for ubersoft.pro. Hand-written HTML; the stylesheet and scripts
+  are inline. Product cards in #apps link to each product site. A Play badge
+  is only on a card whose listing is already public. punchi.tv is a website,
+  so that card links to the site only.
+-->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -377,6 +383,7 @@
 </footer>
 
 <script>
+  // Fade each .reveal block in once it scrolls into view. The hero starts with .in.
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.12});
   document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
   // copyright year: company founded 2025; end year tracks the current year
